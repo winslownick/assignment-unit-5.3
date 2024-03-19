@@ -1,7 +1,17 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+let myCollection = [];
 
-
+const addToCollection = (collection, title, artist, yearsPublished) => {
+ let recordInformation = {
+  title: 'Return of the Mack',
+  artist: 'Mark Morrison',
+  yearsPublished: 30
+ };
+ myCollection.push(recordInformation);
+  return recordInformation;
+} // end function
+console.log(myCollection)
 
 
 
