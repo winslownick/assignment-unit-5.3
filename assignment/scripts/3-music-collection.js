@@ -2,19 +2,50 @@ console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 let myCollection = [];
 
-const addToCollection = (collection, title, artist, yearsPublished) => {
- let recordInformation = {
-  title: 'Return of the Mack',
-  artist: 'Mark Morrison',
-  yearsPublished: 30
- };
- myCollection.push(recordInformation);
-  return recordInformation;
+const addToCollection = (collection, title, artist, yearPublished) => {
+ let recordAlbum = {
+  title: title,
+  artist: artist,
+  yearPublished: yearPublished
+  }; // end object
+  
+  collection.push(recordAlbum);
+  
+   return recordAlbum;
 } // end function
-console.log(myCollection)
+
+let album1 = console.log(addToCollection(myCollection, 'Return of the Mack', 'Mark Morrison', 1996));
+let album2 = console.log(addToCollection(myCollection, 'Sweat (A la la la la long', 'Inner Circel', 1992));
+let album3 = console.log(addToCollection(myCollection, 'Should\'ve Been A Cowboy', 'Toby Kieth', 1993));
+let album4 = console.log(addToCollection(myCollection, 'Little Miss Saturday Night', 'Drew Parker', 2022));
+let album5 = console.log(addToCollection(myCollection, 'Where I Find God', 'Larry Fleet', 2021));
+let album6 = console.log(addToCollection(myCollection, 'Pink Houses', 'Jogn Mellencamp', 1983));
+
+console.log(myCollection);
+
+const showCollection = collection => {
+ for(let i = 0; i < collection.length; i++) {
+  console.log(`${collection[i].title}  by ${collection[i].artist}, published in ${collection[i].yearPublished}`);
+ } // end loop
+} // end function
+
+console.log('My colleciton:', myCollection);
+showCollection(myCollection);
+
+const findByArtist = (collection, artist) => {
+ const artistArray = []; 
+
+ for(let i = 0; i < collection.length; i++) {
+  if(collection[i].artist === artist) {
+    artistArray.push(collection[i]);
+     
+  } // end if statement
+ } // end loop
+ return artistArray;
+} // end function
 
 
-
+console.log(findByArtist( 'John Mellecamp'));
 
 
 
