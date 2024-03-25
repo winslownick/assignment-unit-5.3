@@ -45,9 +45,6 @@ const findByArtist = (collection, artist) => {
 } // end function
 
 
-console.log(findByArtist( 'John Mellecamp'));
-
-
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
